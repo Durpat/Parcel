@@ -1,11 +1,13 @@
 import Parcel.*;
 import ParcelLocker.*;
 
+import static Parcel.Parcel.addParcel;
+
 public class Main {
 
     public static void main(String[] args) {
-        Parcel paczka = new ParcelA("AAA-4234", 32);
-        Parcel paczka2 = new ParcelB("CCC-4444", 32);
+        Parcel paczka = addParcel("AAA-4234", 5);
+        Parcel paczka2 = addParcel("CCC-4444", 32);
         ParcelLocker paczkomat = new ParcelLocker();
 
         paczkomat.addParcel(paczka);
