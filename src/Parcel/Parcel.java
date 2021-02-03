@@ -35,7 +35,7 @@ public abstract class Parcel {
     }
 
     public static Parcel addParcel(String code, int weight){
-        if(weight < 0 || weight > 60){
+        if(weight < 0 || weight > 50){
             throw new IllegalArgumentException("Błędna waga paczki.");
         }
         else if(weight < 10){
@@ -44,5 +44,9 @@ public abstract class Parcel {
         else {
             return new ParcelB(code, weight);
         }
+    }
+
+    public static Parcel addParcel(){
+        throw new IllegalArgumentException("Nie podano danych paczki");
     }
 }

@@ -8,9 +8,9 @@ public class ParcelLocker {
     List<Parcel> ParcelList = new ArrayList<>();
     private int lockerCapacity = 3;
 
-    public void addParcel(Parcel pack) {
-        if (pack != null && ParcelList.size() < lockerCapacity) {
-            ParcelList.add(pack);
+    public void addParcel(Parcel parcel) {
+        if (parcel != null && ParcelList.size() < lockerCapacity) {
+            ParcelList.add(parcel);
         }
         else {
             throw new IllegalArgumentException("Błąd przy dodawaniu paczki");
